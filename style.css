@@ -9,6 +9,7 @@ div {
 
 body {
     overflow-x: hidden;
+    width: 100%;
 }
 
 .container {
@@ -117,7 +118,6 @@ header {
 }
 
 .section__greeting--info {
-    min-width: 450px;
     width: 50%;
 }
 
@@ -133,9 +133,11 @@ header {
     margin-top: 5%;
     margin-bottom: 5%;
 }
-.btn_main{
+
+.btn_main {
     width: 40%;
 }
+
 main {
     margin: 2.5%;
     display: flex;
@@ -163,6 +165,7 @@ main {
     overflow: hidden;
     width: 100%;
     list-style: none;
+    flex-wrap: wrap;
 }
 
 .section__gallery>ul>li {
@@ -196,9 +199,7 @@ main {
     flex-wrap: wrap;
 }
 
-.section__pompa--info {
-    min-width: 400px;
-}
+.section__pompa--info {}
 
 .section__form {
     margin: 2rem;
@@ -223,7 +224,6 @@ main {
 
 .section__form--inputs {
     display: flex;
-    min-width: 400px;
     flex-direction: column;
     margin: 2rem;
 }
@@ -234,7 +234,6 @@ main {
     align-items: center;
     width: 30%;
     flex-direction: column;
-    min-width: 400px;
 }
 
 .bottle-cost {
@@ -253,6 +252,7 @@ main {
     border-radius: 6px;
     border: none;
     outline: none;
+    min-width: 300px;
     /* border: 2px solid; */
 }
 
@@ -316,6 +316,9 @@ main {
 .social_item {
     display: grid;
     place-items: center;
+    width: 30%;
+    /* text-align: center;
+    font-size: smaller; */
 }
 
 .social_icon {
@@ -328,3 +331,49 @@ main {
 }
 
 /* Footer-end */
+
+/* Media Queries */
+@media screen and (max-width: 900px) {
+    .section__greeting--img {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .section__greeting--info {
+        width: 100%;
+    }
+
+    .greeting__info--item {
+        margin: 2%;
+    }
+
+    .section__form--inputs,
+    .section__form--calculator {
+        width: 100%;
+    }
+
+    .social {
+        flex-wrap: wrap;
+    }
+
+    .social_item {
+        width: 50%;
+    }
+
+    .social_whatsapp {
+        width: 100%;
+    }
+
+    .section__form--inputs>input {
+        align-self: center;
+    }
+
+    .bold {
+        font-size: 1rem;
+    }
+    .btn_main{
+        width: 70%;
+    }
+}
+
+/* Media Queries-End */
