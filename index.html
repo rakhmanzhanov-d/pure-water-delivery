@@ -32,7 +32,9 @@
 						<div class="phone_number menu-item">
 							<a href="tel:++996707973685">0707 97-36-85</a>
 						</div>
-						<button class="btn menu-item">Заказать звонок</button>
+						<button class="btn menu-item">
+							<a href="#form">Заказать звонок</a>
+						</button>
 					</div>
 				</div>
 				<div class="section__greeting">
@@ -49,7 +51,7 @@
 							здоровье.
 						</p>
 						<button class="btn greeting__info--item btn_main">
-							Заказать звонок
+							<a href="#form">Заказать звонок</a>
 						</button>
 					</div>
 				</div>
@@ -92,7 +94,7 @@
 						</p>
 					</div>
 				</div>
-				<iframe
+				<!-- <iframe
 					src="https://docs.google.com/forms/d/e/1FAIpQLSczHS7p5YVYAMXm9vWIFs6MRLXlMyg1px8OFGlrwIeNTffPHw/viewform?embedded=true"
 					width="640"
 					height="1400"
@@ -101,11 +103,12 @@
 					marginwidth="0"
 					style="overflow-y: hidden;"
 					>Загрузка…</iframe
-				>
-				<!-- <form
+				> -->
+				<form
 					class="section__form"
 					action="https://formspree.io/f/xzbkoaog"
 					method="post"
+					id="form"
 				>
 					<h1 class="section__form--title title">Заказывайте онлайн</h1>
 					<div class="form__container">
@@ -133,14 +136,23 @@
 						<div class="section__form--calculator">
 							<h2>Количество бутылей</h2>
 							<div class="calculator">
-								<img src="img/-.png" alt="" />
+								<button data-operation="-" class="minus calculate">
+									<img
+										class="minus"
+										data-operation="-"
+										src="img/-.png"
+										alt=""
+									/>
+								</button>
 								<input
 									type="number"
 									name="количество"
 									class="bottle_amount"
 									value="1"
 								/>
-								<img src="img/+.png" alt="" />
+								<button data-operation="+" class="plus calculate">
+									<img class="plus" data-operation="+" src="img/+.png" alt="" />
+								</button>
 							</div>
 							<div class="bottle-cost">
 								<h2>Цена</h2>
@@ -149,14 +161,13 @@
 									name="Цена"
 									class="bottle_cost"
 									value="120"
-									disabled
 								/>
 								<h2>сом</h2>
 							</div>
 						</div>
 					</div>
 					<button type="submit" class="form__btn btn">Заказать</button>
-				</form> -->
+				</form>
 			</main>
 			<footer>
 				<div class="section_contacts">
@@ -193,5 +204,6 @@
 				</div>
 			</footer>
 		</div>
+		<script src="main.js"></script>
 	</body>
 </html>
